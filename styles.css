@@ -1,0 +1,154 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  background-color: #fff;
+}
+
+/* Navbar */
+.navbar {
+  background: #fff;
+  color: #ff6b00;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #ff6b00;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ff6b00;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(to right, #ffb06a, #ff6b00);
+  color: #fff;
+  text-align: center;
+  padding: 8rem 2rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* About */
+.about {
+  padding: 5rem 2rem;
+  text-align: center;
+  background: #fff8f3;
+}
+
+.about h2 {
+  color: #ff6b00;
+  margin-bottom: 1rem;
+}
+
+/* Departments */
+.departments {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  padding: 4rem 5%;
+}
+
+.department-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.department-card:hover {
+  transform: translateY(-8px);
+}
+
+.department-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.department-card h3 {
+  color: #ff6b00;
+  margin: 1rem;
+}
+
+.department-card p {
+  padding: 0 1rem 1.5rem;
+}
+
+/* Projects */
+.projects {
+  text-align: center;
+  background: #fff8f3;
+  padding: 5rem 2rem;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.project-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+}
+
+.project-card h4 {
+  color: #ff6b00;
+  margin-bottom: 0.8rem;
+}
+
+/* Footer */
+.footer {
+  background: #ff6b00;
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem;
+}
