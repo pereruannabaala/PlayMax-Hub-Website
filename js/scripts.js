@@ -11,6 +11,269 @@ document.addEventListener("scroll", () => {
   });
 });
 
+    const carousel = document.getElementById('carouselTrack');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const dotsContainer = document.getElementById('dots');
+    const programs = document.querySelectorAll('.program');
+
+    // Create dots
+    programs.forEach((_, i) => {
+      const dot = document.createElement('div');
+      dot.classList.add('dot');
+      if (i === 0) dot.classList.add('active');
+      dot.addEventListener('click', () => scrollToProgram(i));
+      dotsContainer.appendChild(dot);
+    });
+
+    const dots = document.querySelectorAll('.dot');
+
+    function updateDots() {
+      const scrollLeft = carousel.scrollLeft;
+      const programWidth = programs[0].offsetWidth + 32; // width + gap
+      const currentIndex = Math.round(scrollLeft / programWidth);
+      
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === currentIndex);
+      });
+    }
+
+    function scrollToProgram(index) {
+      const programWidth = programs[0].offsetWidth + 32;
+      carousel.scrollTo({
+        left: programWidth * index,
+        behavior: 'smooth'
+      });
+    }
+
+    prevBtn.addEventListener('click', () => {
+      const programWidth = programs[0].offsetWidth + 32;
+      carousel.scrollBy({
+        left: -programWidth,
+        behavior: 'smooth'
+      });
+    });
+
+    nextBtn.addEventListener('click', () => {
+      const programWidth = programs[0].offsetWidth + 32;
+      carousel.scrollBy({
+        left: programWidth,
+        behavior: 'smooth'
+      });
+    });
+
+    carousel.addEventListener('scroll', updateDots);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Email validation function with typo detection
 function isValidEmail(email) {
   // Basic format check
